@@ -1,0 +1,14 @@
+.mainframe {
+  border: 2px solid black;
+  margin: 0px;
+  padding: 38px;
+  background-color: rgb(34, 37, 57);
+  color: white;
+}
+.main-page {
+  background-image: url('https://calendarmedia.blob.core.windows.net/assets/a297af74-5981-4d90-8bff-91066743584d.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 87vh;
+}

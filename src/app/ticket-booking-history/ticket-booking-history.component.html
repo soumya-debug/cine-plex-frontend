@@ -1,0 +1,28 @@
+<div class="booking-history-container" *ngIf="bookingHistory">
+  <h2>Booking History</h2>
+  <button class="btn btn-primary" (click)="backToMovieList()">
+    Back to Movie List
+  </button>
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>User Email</th>
+          <th>Movie</th>
+          <th>Theater</th>
+          <th>Card Holder Name</th>
+          <th>Card Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let history of bookingHistory" class="table-row">
+          <td>{{ history.user }}</td>
+          <td>{{ history.movie }}</td>
+          <td>{{ history.theater }}</td>
+          <td>{{ history.cardHolderName }}</td>
+          <td>{{ maskCardNumber(history.cardNumber) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

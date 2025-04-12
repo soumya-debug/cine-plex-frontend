@@ -1,0 +1,136 @@
+<div class="edit-container">
+  <div class="editBox">
+    <h1 style="text-align: center">ADD MOVIE</h1>
+    <form
+      [formGroup]="addMovieForm"
+      (ngSubmit)="addMovie()"
+      class="form-group"
+      class="input-grp"
+      id="login"
+    >
+      <div class="form-group row">
+        <div class="col">
+          <label class="small_label">Name</label>
+          <input
+            type="text"
+            placeholder="Enter Name"
+            formControlName="name"
+            name="name"
+            class="form-control"
+            [class.is-invalid]="
+              addMovieForm.get('name').invalid &&
+              addMovieForm.get('name').touched
+            "
+          />
+          <small
+            [class.d-none]="
+              addMovieForm.get('name').valid ||
+              addMovieForm.get('name').untouched
+            "
+            class="text-danger"
+            >Name is requied</small
+          >
+        </div>
+        <div class="col">
+          <label class="small_label">Duration</label>
+          <input
+            type="text"
+            placeholder="Enter Duration"
+            formControlName="duration"
+            name="duration"
+            class="form-control"
+            [class.is-invalid]="
+              addMovieForm.get('duration').invalid &&
+              addMovieForm.get('duration').touched
+            "
+          />
+          <small
+            [class.d-none]="
+              addMovieForm.get('duration').valid ||
+              addMovieForm.get('duration').untouched
+            "
+            class="text-danger"
+            >duration is requied</small
+          >
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col">
+          <label class="small_label">Language</label>
+          <input
+            type="language"
+            placeholder="Enter Language"
+            formControlName="language"
+            name="language"
+            class="form-control"
+            [class.is-invalid]="
+              addMovieForm.get('language').invalid &&
+              addMovieForm.get('language').touched
+            "
+          />
+          <small
+            [class.d-none]="
+              addMovieForm.get('language').valid ||
+              addMovieForm.get('language').untouched
+            "
+            class="text-danger"
+            >Language is requied</small
+          >
+        </div>
+        <div class="col">
+          <label class="small_label">Genre</label>
+          <select
+            formControlName="genre"
+            name="genre"
+            class="form-control"
+            [class.is-invalid]="addMovieForm.get('genre').invalid && addMovieForm.get('genre').touched"
+          >
+            <option value="" disabled selected>Select Genre</option>
+            <option *ngFor="let genre of movieGenres" [value]="genre">{{ genre }}</option>
+          </select>
+          <small
+            [class.d-none]="addMovieForm.get('genre').valid || addMovieForm.get('genre').untouched"
+            class="text-danger"
+          >Genre is required</small>
+        </div>
+        
+        </div>
+        <div class="col">
+          <label class="small_label">Image</label>
+          <input
+            type="text"
+            placeholder="Enter Image Link"
+            formControlName="banner"
+            name="banner"
+            class="form-control"
+            [class.is-invalid]="
+              addMovieForm.get('banner').invalid &&
+              addMovieForm.get('banner').touched
+            "
+          />
+          <small
+            [class.d-none]="
+              addMovieForm.get('banner').valid ||
+              addMovieForm.get('banner').untouched
+            "
+            class="text-danger"
+            >Banner is requied</small
+          >
+        </div>
+      <hr />
+      
+      <div style="text-align: center; align-items: center">
+        <button class="btn btn-secondary mr-3" (click)="Theater()">Back</button>
+        <input
+          type="submit"
+          class="btn btn-success mr-3"
+          placeholder="submit"
+          [disabled]="!addMovieForm.valid"
+        />
+        
+      </div>
+    </form>
+    
+  </div>
+
+</div>

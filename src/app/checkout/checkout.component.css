@@ -1,0 +1,72 @@
+ /* Additional CSS for header */
+ .header {
+  background-color: rgb(34, 37, 57);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Additional CSS for checkout details */
+.checkout-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: url('../checkout/pexels-bess-hamiti-36487.jpg'); /* Replace with actual URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid green;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(34, 37, 57, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.banner {
+  padding: 10px 0;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.para {
+  margin: 10px 0;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(0, 123, 255, 0.8);
+}

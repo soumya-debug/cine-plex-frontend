@@ -1,0 +1,88 @@
+.background {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+}
+
+.hi {
+  height: 60px;
+  margin-top: -20px;
+  background-color: rgb(0, 4, 31);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.choosenmovie {
+  border: 1px solid rgb(0, 0, 0);
+  margin: 10px 2px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: rgb(0, 4, 31);
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Adjust the banner size */
+.choosenmovie img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.choosenmovie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.chooseDiv {
+  background-color: rgb(0, 4, 31);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chooseForm {
+  padding: 20px;
+}
+
+.dateInput, .timeInput {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.col {
+  background-color: rgb(0, 4, 31);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.col1 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .choosenmovie, .chooseDiv {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

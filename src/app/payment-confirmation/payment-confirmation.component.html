@@ -1,0 +1,15 @@
+<div class="center-container">
+  <div class="order-card mat-elevation-z4">
+    <div class="confirmation-title">
+      <span class="checkmark"></span> Order Confirmed!
+    </div>
+    <div class="confirmation-text">
+      <p>
+       <b>{{ cardHolderName }}</b>, your payment has been successfully processed for
+        <b>card number</b> ending ****{{ cardNumberLast4 }}.
+      </p>
+      <p>Thank you for choosing our platform.</p>
+    </div>
+    <a [routerLink]="['/home']" class="back-button">Back to Home</a>
+  </div>
+</div>

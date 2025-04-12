@@ -1,0 +1,21 @@
+<div class="background">
+  <div class="hm"><h1>Movies List</h1></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 movieBox" *ngFor="let movie of moviesList">
+        <div class="movieDetail">
+          <p>
+            <img
+              src="{{ movie?.banner }}"
+              alt="banner"
+            />
+          </p>
+          <p>{{ movie?.name }}</p>
+          <p>{{ movie?.duration }}</p>
+          <p>{{ movie?.language }}</p>
+          <p>{{ movie?.genre }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

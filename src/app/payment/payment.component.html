@@ -1,0 +1,51 @@
+<div class="payment-details">
+  <div class="form_payment">
+    <h4>Enter your Card details</h4>
+    <br />
+    <form (submit)="payment()">
+      <div class="input-group">
+        <label>Card Holder Name:</label>
+        <input
+          type="text"
+          [(ngModel)]="cardHolderName"
+          name="cardHolderName"
+          placeholder="Enter Your Card Holder Name"
+          maxlength="30"
+        />
+      </div>
+      <div class="input-group">
+        <label>Card Number:</label>
+        <input
+          type="text"
+          [(ngModel)]="cardNumber"
+          name="cardNumber"
+          placeholder="Enter Your Card Number"
+          maxlength="16"
+        />
+      </div>
+      <div class="input-group">
+        <label>Cvv:</label>
+        <input
+          type="password"
+          [(ngModel)]="cvv"
+          name="cvv"
+          placeholder="Enter CVV"
+          maxlength="3"
+        />
+      </div>
+      <div class="input-group">
+        <label>Expiry Date:</label>
+        <input
+          type="date"
+          [(ngModel)]="expiryDate"
+          name="expiryDate"
+          placeholder="Enter Your Expiry Date"
+        />
+      </div>
+      <div class="main">
+        <br />
+        <button type="submit" class="button">Confirm Payment</button>
+      </div>
+    </form>
+  </div>
+</div>

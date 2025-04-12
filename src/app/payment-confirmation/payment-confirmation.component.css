@@ -1,0 +1,101 @@
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+  background: linear-gradient(to right, #0083a8, #162735);
+}
+
+.order-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  width: 800px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: 4px solid #4caf50;
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.order-card:hover {
+  transform: scale(1.05);
+}
+
+.checkmark {
+  display: inline-block;
+  animation: popOut 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform-origin: bottom;
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.checkmark::before {
+  content: '\2713'; /* Unicode checkmark character */
+  font-size: 60px;
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.confirmation-title {
+  color: #4caf50;
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-text {
+  color: #333;
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.back-button {
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background-color: #45a049;
+}
+
+/* Pop-up effect */
+.order-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 25px;
+  background-color: rgba(34, 37, 57, 0.034);
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.order-card:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}

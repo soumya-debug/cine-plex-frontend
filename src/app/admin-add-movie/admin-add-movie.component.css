@@ -1,0 +1,126 @@
+/* Base styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #121212, #1e1e2f);
+  color: #ffffff;
+  height: 100vh;
+}
+
+/* Centering the form */
+.edit-container {
+  background: url('https://cdn.wallpapersafari.com/61/74/NRc2jp.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 57px;
+}
+
+/* Form box styling */
+.editBox {
+  width: 100%;
+  max-width: 700px;
+  background-color: #1c1c2e;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.editBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+.editBox h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #f8f8f8;
+}
+
+/* Form input fields */
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2e2e42;
+  color: #f1f1f1;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #3d3d5c;
+  outline: none;
+  border: 1px solid #00bfff;
+}
+
+/* Validation error */
+.text-danger {
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: #ff6b6b !important;
+}
+
+/* Buttons */
+button, input[type="submit"] {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px 8px 0;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: #44485f;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #00c896;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5e647f;
+  transform: translateY(-2px);
+}
+
+.btn-success:hover {
+  background-color: #00a47d;
+  transform: translateY(-2px);
+}
+
+/* Responsive layout for rows */
+.form-group.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Submit disabled state */
+input[disabled] {
+  background-color: #888;
+  cursor: not-allowed;
+}

@@ -1,0 +1,39 @@
+.background {
+  background-image: url('../payment/pexels-bess-hamiti-36487.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.movieBox {
+  padding: 10px;
+  max-width: 300px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+}
+
+.movieDetail {
+  border: 2px solid black;
+  padding: 20px;
+  background-color: rgb(34, 37, 57);
+  color: white;
+  text-align: center;
+}
+
+.movieDetail img {
+  width: 100%; /* Make the image responsive within its container */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.hm {
+  background-color: rgb(34, 37, 57);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .movieBox {
+    max-width: 100%; /* Adjust as needed for smaller screens */
+  }
+}

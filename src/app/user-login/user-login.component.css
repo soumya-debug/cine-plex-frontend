@@ -1,0 +1,122 @@
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(1px) brightness(0.9) saturate(1.2);
+}
+
+
+.login-page {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.glass-card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(18, 25, 40, 0.85);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3), 0 0 60px rgba(0, 140, 255, 0.2);
+  animation: glow-pulse 5s infinite alternate;
+  color: white;
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 40px rgba(0, 170, 255, 0.6);
+  }
+}
+
+.glow-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+}
+
+.neon-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-bottom: 2px solid #00ccff;
+  color: white;
+  padding: 12px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+  .neon-input:focus {
+    outline: none;
+    border-bottom: 2px solid #00e5ff;
+    box-shadow: 0 0 8px #00e5ff;
+  }
+
+.neon-btn {
+  background: linear-gradient(to right, #00bcd4, #2196f3);
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.6);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+  .neon-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.9);
+  }
+
+.links {
+  margin-top: 16px;
+  text-align: center;
+}
+
+  .links a {
+    color: #00bcd4;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+    .links a:hover {
+      color: #03e9f4;
+      text-shadow: 0 0 8px #03e9f4;
+    }
+
+.invalid-feedback {
+  color: #ff6b6b;
+  font-size: 13px;
+}

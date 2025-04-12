@@ -1,0 +1,29 @@
+<div class="background text-white min-vh-100 py-4 px-2">
+  <div class="container">
+    <!-- Header -->
+    <div class="header-section">
+      <h1 class="heading-title">🎭 THEATER LIST</h1>
+      <div class="header-buttons">
+        <button class="custom-btn btn-light" (click)="moviesList()">🎬 MOVIES LIST</button>
+        <button class="custom-btn btn-warning" (click)="addTheater()">➕ ADD THEATER</button>
+      </div>
+    </div>
+
+    <!-- Theater Cards -->
+    <div class="row">
+      <div class="col-md-4" *ngFor="let theater of theatersList">
+        <div class="card glass-card text-white p-4 h-100 shadow-lg border-0">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">{{ theater?.theatreName }}</h5>
+            <p class="card-text"><b>📍 Address:</b> {{ theater?.theatreAddress }}</p>
+            <p class="card-text"><b>🎥 Movie:</b> {{ theater?.movie?.name }}</p>
+            <div class="card-buttons">
+              <button class="custom-btn btn-info" (click)="onClickEdit(theater.id)">✏️ EDIT</button>
+              <button class="custom-btn btn-danger" (click)="deletetheater(theater.id)">🗑️ DELETE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

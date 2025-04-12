@@ -1,0 +1,107 @@
+/* Header styles */
+.header {
+  text-align: center;
+  background-color: rgb(0, 4, 31);
+  color: white;
+  padding: 1px 0;
+}
+
+.main {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjB0aWNrZXRzfGVufDB8fDB8fHww&w=1000&q=80');
+}
+
+/* Additional CSS for the search bar */
+.search-bar {
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  padding: 10px 20px;
+  background-color: rgb(0, 4, 31);
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-button {
+  background-color: white;
+  color: rgb(34, 37, 57);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: rgba(211, 203, 203, 0.8);
+}
+
+/* Additional CSS for the filter dropdown */
+.filter-bar {
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.filter-select {
+  padding: 8px 15px;
+  font-size: 16px;
+  border: 3px solid #db0e0e;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Style for the selected option */
+.filter-select option:checked {
+  background-color: #000000;
+}
+
+/* Hover effect for the options */
+.filter-select option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Movie container */
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Movie box styles */
+.movieBox {
+  flex: 1 1 calc(33.33% - 20px); /* Adjust this to your desired column count */
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.movieDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  background-color: rgb(34, 37, 57);
+  color: white;
+}
+
+
+.movie_poster {
+  max-width: 50%;
+  height: auto;
+}
+
+.movieDetail:hover {
+  transform: scale(1.05);
+}

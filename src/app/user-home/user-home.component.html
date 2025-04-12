@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="search-bar">
+    <input
+      class="search-input"
+      type="text"
+      [(ngModel)]="searchMovie"
+      placeholder="Search Movie"
+    />
+    <button class="search-button" (click)="clearSearch()">Clear</button>
+  </div>
+  <div class="header">
+    <h1>Movies Available</h1>
+  </div>
+  <div class="filter-bar">
+    <select class="filter-select" [(ngModel)]="selectedGenre" (change)="applyFilter()">
+      <option value="" disabled selected>Filter</option>
+      <option value="">All Genres</option>
+      <option value="Action">Action</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Drama">Drama</option>
+      <option value="Sci-Fi">Sci-Fi</option>
+      <!-- Add more genre options as needed -->
+    </select>
+  </div>
+  <div class="movie-container">
+    <div class="movieBox" *ngFor="let movie of filteredMovies">
+      <div class="movieDetail" (click)="bookMovie(movie)">
+        <img src="{{ movie?.banner }}" alt="banner" class="movie_poster" />
+        <p>{{ movie?.name }}</p>
+        <p>{{ movie?.duration }}</p>
+        <p>{{ movie?.language }}</p>
+        <p>{{ movie?.genre }}</p>
+      </div>
+    </div>
+  </div>
+</div>

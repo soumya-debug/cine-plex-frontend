@@ -1,0 +1,160 @@
+.home {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+}
+
+.header-bar {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.ultra-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.ultra-btn {
+  position: relative;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: white;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255,255,255,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.ultra-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.ultra-btn:hover::before {
+  left: 100%;
+}
+
+.ultra-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.ultra-btn:active {
+  transform: scale(0.98);
+}
+
+.btn-red {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #222;
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #9d50bb, #6e48aa);
+}
+
+.btn-outline {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Advanced Horizontal Card Design */
+.movie-card-horizontal {
+  display: flex;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 20px;
+}
+
+.movie-card-horizontal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card-img {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.movie-card-content {
+  flex: 1;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-card-content h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.movie-card-content p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.styled-btn {
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.styled-btn.blue {
+  background: linear-gradient(to right, #304ffe, #00bcd4);
+  color: #fff;
+}
+
+.styled-btn.red {
+  background: linear-gradient(to right, #ff1744, #d50000);
+  color: #fff;
+}
+
+.styled-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}

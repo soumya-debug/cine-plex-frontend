@@ -1,0 +1,26 @@
+<div class="header">
+  <h1>Confirmation Page</h1>
+</div>
+
+<div class="checkout-details">
+  <div class="main">
+    <div class="banner">
+      <img
+        src="{{ movieData?.banner }}"
+        width="60%"
+        height="auto"
+        alt="banner"
+      />
+    </div>
+    <div class="details">
+      <p class="para">MOVIE NAME : {{ movieData?.name }}</p>
+      <p class="para">THEATER NAME : {{ theaterData?.theatreName }}</p>
+      <p class="para">DURATION : {{ movieData?.duration }}</p>
+      <p class="para">SEAT NO : {{ selectedSeats }}</p>
+      <p class="para">PRICE : {{ selectedSeats?.length * price }}</p>
+    </div>
+    <div class="button-container">
+      <a [routerLink]="['/payment']" class="button">Click to Pay</a>
+    </div>
+  </div>
+</div>

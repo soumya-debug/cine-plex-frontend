@@ -1,0 +1,85 @@
+/* Background image for the entire container */
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.hindustantimes.com/img/2023/01/20/550x309/The-offers-were-also-made-available-for-purchase-f_1674243814146.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Background image for the form */
+.editBox {
+  max-width: 600px;
+  margin: 10px 2px;
+  padding: 38px;
+  background-image: url("https://watermark.lovepik.com/photo/50091/8224.jpg_wh1200.jpg");
+  background-color: rgba(34, 37, 57, 0.9);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Apply the popout effect on hover */
+.editBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-grp {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styles */
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 164px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+/* Additional styling for small labels */
+.small_label {
+  font-size: 14px;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 767px) {
+  .editBox {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
