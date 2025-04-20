@@ -52,7 +52,7 @@ export class UserLoginComponent implements OnInit {
           // Check if result contains user information
           if (result.user) {
             // Store email and role in localStorage
-            localStorage.setItem('user_id', result.user.email); // store user email
+            localStorage.setItem('user_email', result.user.email); // store user email
             localStorage.setItem('role', result.user.role); // store user role
           }
   
