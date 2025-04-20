@@ -25,7 +25,7 @@ export class CommunicationService {
     'Content-Type': 'application/json',
   });
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getTheaterIdByName(theaterName: string): Observable<number> {
     return this.httpClient.get<number>(
@@ -138,8 +138,8 @@ export class CommunicationService {
   }
 
   addTheater(movieId: number, theatreName: string, theatreAddress: string) {
-    const body = { theatreName, theatreAddress };
-    return this.httpClient.post(`${this.baseUrl}theater/${movieId}`, body, {
+    const body = { movieId, theatreName, theatreAddress };
+    return this.httpClient.post(`${this.baseUrl}theater`, body, {
       headers: this.headers,
     });
   }
