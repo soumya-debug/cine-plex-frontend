@@ -62,7 +62,7 @@ export class PaymentComponent implements OnInit {
         console.log('Payment Successful!', response);
 
         const bookingDetails = {
-          user: localStorage.getItem('user_id'),
+          user: localStorage.getItem('user_email'),
           movie: movieName,
           theater: this.theaterData.theatreName,
           cardHolderName: this.cardHolderName,
