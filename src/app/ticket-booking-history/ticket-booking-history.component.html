@@ -1,11 +1,13 @@
-<div class="booking-history-container" *ngIf="bookingHistory">
+<div class="booking-history-container" *ngIf="bookingHistory?.length > 0; else noHistory">
   <h2>Booking History</h2>
+
   <button class="btn btn-primary" (click)="backToMovieList()">
     Back to Movie List
   </button>
-  <div class="table-container">
-    <table class="table">
-      <thead>
+
+  <div class="table-container mt-3">
+    <table class="table table-striped">
+      <thead class="thead-dark">
         <tr>
           <th>User Email</th>
           <th>Movie</th>
@@ -15,7 +17,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let history of bookingHistory" class="table-row">
+        <tr *ngFor="let history of bookingHistory">
           <td>{{ history.user }}</td>
           <td>{{ history.movie }}</td>
           <td>{{ history.theater }}</td>
@@ -26,3 +28,7 @@
     </table>
   </div>
 </div>
+
+<ng-template #noHistory>
+  <p>No booking history available.</p>
+</ng-template>

@@ -45,20 +45,31 @@ export class UserLoginComponent implements OnInit {
       .login(this.loginForm.value.username, this.loginForm.value.password)
       .subscribe(
         (result: any) => {
-          console.log(result);
+          console.log(result); // Inspect result object
           this.loading = false;
           this.loginError = '';
-          localStorage.setItem('user_id', result.email);
-          localStorage.setItem('role', result.role);
+  
+          // Check if result contains user information
+          if (result.user) {
+            // Store email and role in localStorage
+            localStorage.setItem('user_id', result.user.email); // store user email
+            localStorage.setItem('role', result.user.role); // store user role
+          }
+  
+          // Store JWT token in sessionStorage
+          if (result.token) {
+            sessionStorage.setItem('jwtToken', result.token);
+          }
+  
           this.router.navigate(['/home']);
           location.reload();
         },
         (error) => {
           console.log(error);
           this.loading = false;
-          this.loginError = 'email or password is incorrect';
+          this.loginError = 'Email or password is incorrect';
         }
       );
-  }
+  }  
 
 }

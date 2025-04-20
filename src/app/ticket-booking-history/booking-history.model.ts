@@ -1,6 +1,6 @@
 export interface BookingHistoryDTO {
-  id: number;
-  user: string;
+  id?: number;
+  user: string;             
   movie: string;
   theater: string;
   cardHolderName: string;

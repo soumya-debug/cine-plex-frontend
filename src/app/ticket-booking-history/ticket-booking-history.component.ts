@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommunicationService } from '../communication.service';
 import { BookingHistoryDTO } from './booking-history.model';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ticket-booking-history',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./ticket-booking-history.component.css'],
 })
 export class TicketBookingHistoryComponent implements OnInit {
-  bookingHistory: BookingHistoryDTO[];
+  bookingHistory: BookingHistoryDTO[] = [];
 
   constructor(
     private communicationService: CommunicationService,
@@ -20,19 +20,25 @@ export class TicketBookingHistoryComponent implements OnInit {
     this.loadBookingHistory();
   }
 
-  loadBookingHistory() {
-    this.communicationService.getAllBookingHistory().subscribe((data) => {
-      this.bookingHistory = data;
+  loadBookingHistory(): void {
+    this.communicationService.getAllBookingHistory().subscribe({
+      next: (data) => {
+        this.bookingHistory = data;
+      },
+      error: (err) => {
+        console.error('Failed to load booking history', err);
+      },
     });
   }
 
-  backToMovieList() {
-    this.router.navigate(['admin/movies']); // Adjust the route as needed
+  backToMovieList(): void {
+    this.router.navigate(['admin/movies']);
   }
 
   maskCardNumber(cardNumber: string): string {
-    const last4Digits = cardNumber.slice(-4);
-    const maskedPart = '*'.repeat(cardNumber.length - 4);
-    return maskedPart + last4Digits;
+    const visibleDigits = 4;
+    const last4 = cardNumber?.slice(-visibleDigits);
+    const masked = '*'.repeat(cardNumber.length - visibleDigits);
+    return masked + last4;
   }
 }
